@@ -35,21 +35,24 @@
             // Canvas
             // 
             this.Canvas.BackColor = System.Drawing.SystemColors.Window;
-            this.Canvas.Location = new System.Drawing.Point(244, 9);
-            this.Canvas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Canvas.Location = new System.Drawing.Point(325, 11);
+            this.Canvas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Canvas.Name = "Canvas";
-            this.Canvas.Size = new System.Drawing.Size(609, 376);
+            this.Canvas.Size = new System.Drawing.Size(812, 463);
             this.Canvas.TabIndex = 0;
             this.Canvas.TabStop = false;
             this.Canvas.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox1_Paint);
+            this.Canvas.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Canvas_MouseDown);
+            this.Canvas.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Canvas_MouseMove);
+            this.Canvas.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Canvas_MouseUp);
             // 
             // OOPDraw
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1111, 396);
+            this.ClientSize = new System.Drawing.Size(1481, 487);
             this.Controls.Add(this.Canvas);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "OOPDraw";
             this.Text = "OOPDraw";
             ((System.ComponentModel.ISupportInitialize)(this.Canvas)).EndInit();
