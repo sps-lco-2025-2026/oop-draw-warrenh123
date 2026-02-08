@@ -105,7 +105,9 @@
             this.Shape.FormattingEnabled = true;
             this.Shape.Items.AddRange(new object[] {
             "Line",
-            "Rectangle"});
+            "Rectangle",
+            "Ellipse",
+            "Circle"});
             this.Shape.Location = new System.Drawing.Point(29, 209);
             this.Shape.Name = "Shape";
             this.Shape.Size = new System.Drawing.Size(160, 24);

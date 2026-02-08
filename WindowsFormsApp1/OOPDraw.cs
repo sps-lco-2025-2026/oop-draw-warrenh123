@@ -48,6 +48,12 @@ namespace WindowsFormsApp1
                 case "Rectangle":
                     shapes.Add(new Rectangle(currentPen, e.X, e.Y));
                     break;
+                case "Ellipse":
+                    shapes.Add(new Ellipse(currentPen, e.X, e.Y));
+                    break;
+                case "Circle":
+                    shapes.Add(new Circle(currentPen, e.X, e.Y));
+                    break;
             }
         }
 
