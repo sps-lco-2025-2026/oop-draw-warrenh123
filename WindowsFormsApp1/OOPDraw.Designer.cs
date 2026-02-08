@@ -29,6 +29,12 @@
         private void InitializeComponent()
         {
             this.Canvas = new System.Windows.Forms.PictureBox();
+            this.LineWidth = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.Colour = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.Shape = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Canvas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -38,7 +44,7 @@
             this.Canvas.Location = new System.Drawing.Point(325, 11);
             this.Canvas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Canvas.Name = "Canvas";
-            this.Canvas.Size = new System.Drawing.Size(812, 463);
+            this.Canvas.Size = new System.Drawing.Size(1067, 738);
             this.Canvas.TabIndex = 0;
             this.Canvas.TabStop = false;
             this.Canvas.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox1_Paint);
@@ -46,23 +52,105 @@
             this.Canvas.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Canvas_MouseMove);
             this.Canvas.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Canvas_MouseUp);
             // 
+            // LineWidth
+            // 
+            this.LineWidth.FormattingEnabled = true;
+            this.LineWidth.Items.AddRange(new object[] {
+            "Thin",
+            "Medium ",
+            "Thick"});
+            this.LineWidth.Location = new System.Drawing.Point(29, 82);
+            this.LineWidth.Margin = new System.Windows.Forms.Padding(4);
+            this.LineWidth.Name = "LineWidth";
+            this.LineWidth.Size = new System.Drawing.Size(160, 24);
+            this.LineWidth.TabIndex = 1;
+            this.LineWidth.SelectedIndexChanged += new System.EventHandler(this.LineWidth_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(25, 63);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(69, 16);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Line Width";
+            // 
+            // Colour
+            // 
+            this.Colour.FormattingEnabled = true;
+            this.Colour.Items.AddRange(new object[] {
+            "Red",
+            "Green",
+            "Blue"});
+            this.Colour.Location = new System.Drawing.Point(29, 145);
+            this.Colour.Margin = new System.Windows.Forms.Padding(4);
+            this.Colour.Name = "Colour";
+            this.Colour.Size = new System.Drawing.Size(160, 24);
+            this.Colour.TabIndex = 3;
+            this.Colour.SelectedIndexChanged += new System.EventHandler(this.Colour_SelectedIndexChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(25, 126);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(46, 16);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Colour";
+            // 
+            // Shape
+            // 
+            this.Shape.FormattingEnabled = true;
+            this.Shape.Items.AddRange(new object[] {
+            "Line",
+            "Rectangle"});
+            this.Shape.Location = new System.Drawing.Point(29, 209);
+            this.Shape.Name = "Shape";
+            this.Shape.Size = new System.Drawing.Size(160, 24);
+            this.Shape.TabIndex = 5;
+            this.Shape.SelectedIndexChanged += new System.EventHandler(this.Shape_SelectedIndexChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(27, 190);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(47, 16);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Shape";
+            // 
             // OOPDraw
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1481, 487);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.Shape);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.Colour);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.LineWidth);
             this.Controls.Add(this.Canvas);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "OOPDraw";
             this.Text = "OOPDraw";
             ((System.ComponentModel.ISupportInitialize)(this.Canvas)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.PictureBox Canvas;
+        private System.Windows.Forms.ComboBox LineWidth;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox Colour;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox Shape;
+        private System.Windows.Forms.Label label3;
     }
 }
 
